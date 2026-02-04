@@ -2,18 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VITAPI – Event & Emergency Notifications</title>
+  <title>VITAPI – Calm, Reliable Notifications</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap 5 -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1f2933;
     }
+
     .hero {
-      background: linear-gradient(180deg, #ffffff, #f6f7f9);
+      background: linear-gradient(180deg, #ffffff 0%, #f4f6f8 100%);
+    }
+
+    .hero h1 {
+      letter-spacing: -0.02em;
+    }
+
+    .icon-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #eef2ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4f46e5;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .soft-card {
+      border: none;
+      border-radius: 14px;
+    }
+
+    .example-box {
+      background: #f9fafb;
+      border-left: 4px solid #4f46e5;
+      padding: 1rem 1.25rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -21,7 +61,7 @@
 <body class="bg-light">
 
 <!-- NAV -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+<nav class="navbar navbar-light bg-white border-bottom">
   <div class="container">
     <a class="navbar-brand fw-semibold" href="index.html">VITAPI</a>
     <div>
@@ -33,46 +73,66 @@
 
 <!-- HERO -->
 <section class="hero py-5">
-  <div class="container text-center">
-    <h1 class="display-5 fw-semibold mb-3">
-      Calm, reliable notifications<br class="d-none d-md-block">
-      when they matter most
-    </h1>
-    <p class="lead text-muted mx-auto" style="max-width: 640px;">
-      VITAPI is a lightweight notification service designed to deliver
-      clear, timely SMS alerts for events, emergencies, and critical updates —
-      without noise, spam, or unnecessary messaging.
-    </p>
-    <div class="mt-4">
-      <a href="opt-in.html" class="btn btn-primary btn-lg px-4">
-        SMS Opt-In Information
-      </a>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <h1 class="display-5 fw-semibold mb-3">
+          Calm, reliable notifications<br class="d-none d-md-block">
+          when they matter most
+        </h1>
+        <p class="lead text-muted">
+          VITAPI delivers clear, consent-based SMS alerts for events,
+          emergencies, and critical updates — without spam, noise,
+          or unnecessary messaging.
+        </p>
+        <a href="opt-in.html" class="btn btn-primary btn-lg mt-3">
+          View SMS Opt-In Information
+        </a>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="https://images.unsplash.com/photo-1581091215367-59ab6b63f6a4?auto=format&fit=crop&w=900&q=80"
+          alt="Notification system dashboard"
+          class="img-fluid rounded-4 shadow-sm">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PURPOSE -->
+<!-- VALUES -->
 <section class="py-5 bg-white">
   <div class="container">
     <div class="row g-4 text-center">
       <div class="col-md-4">
-        <h5 class="fw-semibold">Built for clarity</h5>
+        <div class="icon-circle mx-auto">
+          <i class="bi bi-bell"></i>
+        </div>
+        <h5 class="fw-semibold">Purposeful alerts</h5>
         <p class="text-muted">
-          Messages are short, purposeful, and sent only when they provide
-          meaningful value.
+          Messages are sent only when they communicate something
+          important, urgent, or time-sensitive.
         </p>
       </div>
+
       <div class="col-md-4">
-        <h5 class="fw-semibold">Opt-in by design</h5>
+        <div class="icon-circle mx-auto">
+          <i class="bi bi-check-circle"></i>
+        </div>
+        <h5 class="fw-semibold">Explicit opt-in</h5>
         <p class="text-muted">
-          Every message is delivered only to users who have explicitly
-          requested notifications.
+          Every recipient has actively requested to receive
+          notifications — no assumptions, no surprises.
         </p>
       </div>
+
       <div class="col-md-4">
-        <h5 class="fw-semibold">Respect for privacy</h5>
+        <div class="icon-circle mx-auto">
+          <i class="bi bi-shield-lock"></i>
+        </div>
+        <h5 class="fw-semibold">Privacy-first</h5>
         <p class="text-muted">
-          Phone numbers are never sold, shared, or used for marketing.
+          Phone numbers are never sold, shared, or used for
+          marketing purposes.
         </p>
       </div>
     </div>
@@ -82,28 +142,31 @@
 <!-- USE CASES -->
 <section class="py-5">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <h2 class="fw-semibold mb-3">What VITAPI is used for</h2>
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <h2 class="fw-semibold mb-3">Designed for real-world use</h2>
         <p class="text-muted">
-          VITAPI supports a range of time-sensitive communication needs,
-          especially where reliability and consent matter.
+          VITAPI supports organizations and teams that need reliable,
+          respectful communication — especially when timing matters.
         </p>
         <ul class="text-muted">
           <li>Emergency and safety notifications</li>
-          <li>Event schedule changes or cancellations</li>
+          <li>Event delays, cancellations, or changes</li>
           <li>Weather-related alerts</li>
           <li>Operational or system status updates</li>
         </ul>
       </div>
+
       <div class="col-md-6">
-        <div class="card shadow-sm">
+        <div class="soft-card card shadow-sm">
           <div class="card-body">
-            <h6 class="text-uppercase text-muted mb-2">Example Message</h6>
-            <p class="mb-0">
-              “VITAPI Alert: Today’s outdoor event has been delayed due to
-              weather. Updated schedule will follow shortly.”
-            </p>
+            <h6 class="text-uppercase text-muted mb-2">
+              Example SMS Message
+            </h6>
+            <div class="example-box">
+              VITAPI Alert: Due to severe weather, tonight’s outdoor
+              event has been postponed. Updated details will follow.
+            </div>
           </div>
         </div>
       </div>
@@ -114,12 +177,12 @@
 <!-- TRUST -->
 <section class="py-5 bg-white">
   <div class="container text-center">
-    <h2 class="fw-semibold mb-3">Designed with trust in mind</h2>
-    <p class="text-muted mx-auto" style="max-width: 680px;">
-      VITAPI follows industry best practices for SMS delivery, consent,
-      and opt-out handling. Users can stop messages at any time by replying
-      <strong>STOP</strong>, or request assistance by replying
-      <strong>HELP</strong>.
+    <h2 class="fw-semibold mb-3">Built with trust and compliance in mind</h2>
+    <p class="text-muted mx-auto" style="max-width: 720px;">
+      VITAPI follows industry best practices for SMS delivery,
+      consent tracking, and opt-out handling. Users may unsubscribe
+      at any time by replying <strong>STOP</strong>, or request help
+      by replying <strong>HELP</strong>.
     </p>
   </div>
 </section>
